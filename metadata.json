@@ -1,0 +1,6 @@
+{
+  "name": "ACDS Website",
+  "description": "Website for the Amassoma Cultural and Development Society (ACDS)",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
