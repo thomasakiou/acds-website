@@ -14,6 +14,7 @@ import { Projects } from './pages/Projects'; // Force TS Server refresh
 import { Directory } from './pages/Directory';
 import { Register } from './pages/Register';
 import { Donate } from './pages/Donate';
+import { ArticleDetail } from './pages/ArticleDetail';
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/archive" element={<Archive />} />
+            <Route path="/archive/:id" element={<ArticleDetail />} />
             <Route path="/events" element={<Events />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/directory" element={<Directory />} />

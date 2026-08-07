@@ -116,28 +116,79 @@ export const MOCK_ARTICLES: Article[] = [
     id: '1',
     title: 'The Origin of Amassoma: A Historical Retrospective',
     summary: 'Discover the roots of the Amassoma people and the founding fathers who established our great community along the Nun River.',
-    content: 'Long ago...',
-    date: '2024-05-12',
+    content: `Amassoma, nestled along the banks of the Nun River in Southern Ijaw Local Government Area of Bayelsa State, is one of the most historically significant communities in the Niger Delta. The origins of the Amassoma people trace back several centuries, rooted in the broader Ijaw migration and settlement patterns that shaped the region.
+
+According to oral traditions passed down through generations, the founding fathers of Amassoma were pioneering fishermen and farmers who recognized the strategic and fertile nature of the land along the Nun River. The river was not merely a geographical feature — it was the lifeblood of the community, providing sustenance, transportation, and a spiritual connection to the ancestors.
+
+The name "Amassoma" itself carries deep meaning in the Ijaw language, reflecting the community's identity and its relationship with the natural world. Elders recount stories of the first settlers establishing sacred groves, fishing grounds, and communal meeting places that would form the foundation of the town's social structure.
+
+Over the centuries, Amassoma grew into a vibrant community known for its skilled fishermen, traders, and scholars. The town became a center of learning and culture in Southern Ijaw, producing notable figures who contributed to the development of the broader Bayelsa State and Nigeria as a whole.
+
+The colonial era brought significant changes to Amassoma, as it did to many Niger Delta communities. However, the people of Amassoma demonstrated remarkable resilience, preserving their cultural heritage while adapting to new realities. The establishment of schools and churches in the early 20th century opened new avenues for education and development.
+
+Today, Amassoma is perhaps best known as the home of Niger Delta University, one of the premier institutions of higher learning in the region. This university stands as a testament to the community's long-standing commitment to education and intellectual development — a value that has been central to Amassoma's identity since its founding.
+
+The Amassoma Community Development Society (ACDS) continues this legacy, working to document, preserve, and celebrate the rich history of the community while driving sustainable development for future generations.`,
+    date: '2026-06-12',
     category: 'History',
-    imageUrl: 'https://images.unsplash.com/photo-1547471080-7cb2a65492d5?auto=format&fit=crop&q=80&w=800'
+    imageUrl: '/assets/img/article/amassoma.jpg'
   },
   {
     id: '2',
     title: 'Annual Seigbein Fishing Festival Announced',
     summary: 'The dates for this year\'s Seigbein festival have been set. Join us for a week of cultural displays, fishing, and community bonding.',
-    content: 'The festival will feature...',
-    date: '2024-08-01',
+    content: `The Seigbein Fishing Festival is one of the most cherished cultural traditions of the Amassoma people, a vibrant celebration that brings together the entire community in a joyous display of heritage, skill, and unity. This year's festival promises to be the most spectacular yet, with a full week of events planned across the community.
+
+The festival takes its name from the Ijaw word for a traditional fishing technique that has been practiced along the Nun River for generations. More than just a fishing competition, Seigbein is a cultural institution — a time when the community comes together to honor its ancestors, celebrate its identity, and pass down traditions to the younger generation.
+
+This year's schedule includes:
+
+**Day 1 - Opening Ceremony:** The festival kicks off with a traditional libation and prayer led by community elders, invoking the blessings of the ancestors and the river spirits. Cultural dance troupes from across Southern Ijaw will perform, showcasing the rich diversity of Ijaw artistic expression.
+
+**Days 2-4 - The Fishing Competition:** The heart of the festival, where fishermen of all ages demonstrate their skills using both traditional and modern techniques. Categories include traditional net fishing, canoe racing, and the prestigious Seigbein technique competition. Prizes will be awarded to the top performers in each category.
+
+**Day 5 - Cultural Exhibition:** A showcase of Amassoma's arts, crafts, and culinary traditions. Local artisans will display their work, and community members are invited to share traditional recipes and food preparation methods.
+
+**Day 6 - Youth Day:** Dedicated to the next generation, featuring educational programs, youth talent shows, and mentorship sessions with community leaders and professionals.
+
+**Day 7 - Closing Ceremony:** A grand finale featuring a community feast, awards presentation, and a spectacular display of traditional masquerades.
+
+All members of the Amassoma diaspora are warmly invited to return home for this celebration. The ACDS is coordinating accommodation and transportation assistance for those traveling from afar. Contact the events coordinator for more details.`,
+    date: '2026-07-01',
     category: 'Culture',
-    imageUrl: 'https://images.unsplash.com/photo-1534358284523-edbd1ce48375?auto=format&fit=crop&q=80&w=800'
+    imageUrl: '/assets/img/article/seigben.jpg'
   },
   {
     id: '3',
     title: 'ACDS Launches New Educational Scholarship for Indigenes',
     summary: 'In line with our development goals, the society has launched a new scholarship fund for brilliant students from Southern Ijaw.',
-    content: 'The society believes...',
-    date: '2024-09-15',
+    content: `The Amassoma Community Development Society (ACDS) is proud to announce the launch of its inaugural Educational Scholarship Fund, a landmark initiative designed to support brilliant and deserving students from Southern Ijaw in pursuing their academic dreams.
+
+The scholarship program reflects the ACDS's core belief that education is the most powerful tool for community development. By investing in the intellectual capital of our youth, we are investing in the future of Amassoma and the broader Southern Ijaw community.
+
+**Scholarship Details:**
+
+The fund will provide financial support to students at various levels of education, from secondary school through university and postgraduate studies. Awards will be based on a combination of academic merit and financial need, ensuring that no deserving student is held back by economic circumstances.
+
+**Eligibility Criteria:**
+- Must be an indigene of Amassoma or Southern Ijaw LGA
+- Must demonstrate strong academic performance (minimum of B average or equivalent)
+- Must show evidence of financial need
+- Must be enrolled in or accepted to a recognized educational institution
+- Must submit two letters of recommendation from community leaders or educators
+
+**Award Categories:**
+- Secondary School Excellence Award: Covers school fees and learning materials
+- Undergraduate Scholarship: Covers tuition, accommodation, and a monthly stipend
+- Postgraduate Research Grant: Supports advanced studies and research projects that benefit the community
+
+**Application Process:**
+Applications are now open and will be accepted through the end of October. Interested candidates should submit their applications through the ACDS website or in person at the society's secretariat. A selection committee comprising educators, community leaders, and ACDS executives will review all applications.
+
+The ACDS extends its heartfelt gratitude to all donors and sponsors who have made this scholarship fund possible. We encourage all members of the Amassoma diaspora to contribute to this fund and help shape the future of our community. Together, we can ensure that every talented young person from our community has the opportunity to reach their full potential.`,
+    date: '2026-07-15',
     category: 'News',
-    imageUrl: 'https://images.unsplash.com/photo-1534358284523-edbd1ce48375?auto=format&fit=crop&q=80&w=800'
+    imageUrl: '/assets/img/article/scholarship.jpg'
   }
 ];
 

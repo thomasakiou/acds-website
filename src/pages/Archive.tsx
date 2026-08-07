@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { MOCK_ARTICLES } from '../data';
 import { BookOpen, Search, Clock, Tag } from 'lucide-react';
 import { format, parseISO } from 'date-fns';
@@ -6,6 +7,7 @@ import { cn } from '../lib/utils';
 import { motion } from 'framer-motion';
 
 export function Archive() {
+  const navigate = useNavigate();
   const [activeFilter, setActiveFilter] = useState<'All' | 'News' | 'History' | 'Culture'>('All');
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -99,7 +101,9 @@ export function Archive() {
                   {article.summary}
                 </p>
                 
-                <button className="text-emerald-600 font-semibold text-sm flex items-center gap-1 hover:text-emerald-700 transition-colors mt-auto">
+                <button
+                  onClick={() => navigate(`/archive/${article.id}`)}
+                  className="text-emerald-600 font-semibold text-sm flex items-center gap-1 hover:text-emerald-700 transition-colors mt-auto">
                   Read Full Article
                 </button>
               </div>
