@@ -16,7 +16,7 @@ export function Home() {
               backgroundImage: 'url("/assets/img/head.jpeg")',
               backgroundPosition: 'center 40%'
             }}
-          // style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1547471080-7cb2a65492d5?auto=format&fit=crop&q=80&w=2000")' }}
+
           />
           <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-900/70 to-stone-900/20" />
         </div>
