@@ -21,7 +21,7 @@ export const MOCK_MEMBERS: Member[] = [
   },
   {
     id: '4', name: 'Engr. Ebimobowei Thomas Akiou', role: 'Assistant Secretary/Communication and Technology Coordinator', isExco: true, joinDate: '2021-02-11',
-    image: '',
+    image: '/assets/img/exco/thomas.jpeg',
     description: 'A computer engineer and technology enthusiast committed to enhancing the society\'s digital presence and communication infrastructure.',
     email: 'ebimobowei.thomas@acds.org', phone: '+234 809 345 6789'
   },
