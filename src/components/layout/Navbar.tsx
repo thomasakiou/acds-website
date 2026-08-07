@@ -28,7 +28,7 @@ export function Navbar() {
               </div>
               <div className="flex flex-col">
                 <span className="font-bold text-xl tracking-tight leading-none">ACDS</span>
-                <span className="text-[10px] text-emerald-400 font-medium tracking-wider uppercase mt-1">Amassoma Society</span>
+                <span className="text-[10px] text-emerald-400 font-medium tracking-wider uppercase mt-1">Amassoma Cultural & Development Society</span>
               </div>
             </Link>
           </div>
