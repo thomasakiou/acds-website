@@ -4,7 +4,7 @@ export const MOCK_MEMBERS: Member[] = [
   {
     id: '1', name: 'Mr. Akpoebi Okorowanta', role: 'Chairman', isExco: true, joinDate: '2020-01-15',
     image: '',
-    description: 'A visionary community leader with over two decades of experience in cultural advocacy and grassroots development across the Niger Delta.',
+    description: 'A visionary community leader with years of experience in cultural advocacy and grassroots development across the Niger Delta.',
     email: 'akpoebiokorowanta@acds.org', phone: '+234 803 456 7890'
   },
   {
