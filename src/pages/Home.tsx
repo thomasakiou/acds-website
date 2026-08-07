@@ -13,7 +13,7 @@ export function Home() {
           <div
             className="absolute inset-0 opacity-40 mix-blend-overlay bg-cover"
             style={{
-              backgroundImage: 'url("assets/img/head.jpeg")',
+              backgroundImage: 'url("/assets/img/head.jpeg")',
               backgroundPosition: 'center 40%'
             }}
 
