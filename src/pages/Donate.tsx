@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Heart, Building2, Book, Anchor, ArrowRight } from 'lucide-react';
+import { Heart, Building2, Book, Anchor, ArrowRight, X } from 'lucide-react';
+import { PaystackButton } from 'react-paystack';
 import { motion } from 'framer-motion';
 
 const CAUSES = [
@@ -12,11 +13,36 @@ const CAUSES = [
 export function Donate() {
   const [amount, setAmount] = useState('10000');
   const [selectedCause, setSelectedCause] = useState('general');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [showModal, setShowModal] = useState(false);
+
+  const publicKey = (import.meta as any).env?.VITE_PAYSTACK_PUBLIC_KEY || "pk_test_626dcb202750117e593afeb8d06a5b20da02dc6e";
+
+  const componentProps = {
+    email: email || "supporter@acds.org",
+    amount: (parseInt(amount) || 0) * 100, // Paystack requires amount in kobo
+    metadata: {
+      name: name || "Supporter",
+      phone: '',
+      custom_fields: []
+    },
+    publicKey,
+    text: "Donate with Paystack",
+    onSuccess: (reference: any) => {
+      alert("Payment Successful! Thank you for your support. Reference: " + reference.reference);
+      setName('');
+      setEmail('');
+    },
+    onClose: () => {
+      console.log('Payment modal closed');
+    },
+  };
 
   return (
     <div className="min-h-screen bg-stone-50 py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-stone-900 mb-4 flex items-center justify-center gap-3">
             <Heart className="w-8 h-8 text-emerald-600" />
@@ -28,12 +54,12 @@ export function Donate() {
         </div>
 
         <div className="flex flex-col lg:flex-row gap-12">
-          
+
           {/* Donation Form */}
           <div className="lg:w-2/3">
             <div className="bg-white rounded-3xl p-8 shadow-sm border border-stone-100">
               <h2 className="text-2xl font-bold text-stone-900 mb-8">Make a Secure Donation</h2>
-              
+
               <div className="space-y-8">
                 {/* Select Amount */}
                 <div>
@@ -43,11 +69,10 @@ export function Donate() {
                       <button
                         key={amt}
                         onClick={() => setAmount(amt)}
-                        className={`py-3 rounded-xl font-bold transition-all border ${
-                          amount === amt 
-                            ? 'bg-emerald-600 border-emerald-600 text-white' 
-                            : 'bg-stone-50 border-stone-200 text-stone-700 hover:bg-stone-100'
-                        }`}
+                        className={`py-3 rounded-xl font-bold transition-all border ${amount === amt
+                          ? 'bg-emerald-600 border-emerald-600 text-white'
+                          : 'bg-stone-50 border-stone-200 text-stone-700 hover:bg-stone-100'
+                          }`}
                       >
                         ₦{parseInt(amt).toLocaleString()}
                       </button>
@@ -56,8 +81,8 @@ export function Donate() {
                   <div className="mt-4">
                     <div className="relative">
                       <span className="absolute left-4 top-1/2 -translate-y-1/2 text-stone-500 font-bold">₦</span>
-                      <input 
-                        type="number" 
+                      <input
+                        type="number"
                         value={amount}
                         onChange={(e) => setAmount(e.target.value)}
                         className="w-full pl-10 pr-4 py-4 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 bg-stone-50/50 font-bold text-lg"
@@ -75,11 +100,10 @@ export function Donate() {
                       <button
                         key={cause.id}
                         onClick={() => setSelectedCause(cause.id)}
-                        className={`p-4 rounded-xl flex items-center gap-3 transition-all border text-left ${
-                          selectedCause === cause.id
-                            ? 'bg-emerald-50 border-emerald-500 text-emerald-900'
-                            : 'bg-white border-stone-200 text-stone-600 hover:bg-stone-50'
-                        }`}
+                        className={`p-4 rounded-xl flex items-center gap-3 transition-all border text-left ${selectedCause === cause.id
+                          ? 'bg-emerald-50 border-emerald-500 text-emerald-900'
+                          : 'bg-white border-stone-200 text-stone-600 hover:bg-stone-50'
+                          }`}
                       >
                         <div className={`w-10 h-10 rounded-full flex items-center justify-center ${selectedCause === cause.id ? 'bg-emerald-200/50 text-emerald-700' : 'bg-stone-100 text-stone-500'}`}>
                           {cause.icon}
@@ -94,17 +118,38 @@ export function Donate() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 border-t border-stone-100">
                   <div className="space-y-2">
                     <label className="text-sm font-semibold text-stone-900">Full Name</label>
-                    <input type="text" className="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 bg-stone-50/50" placeholder="John Doe" />
+                    <input
+                      type="text"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      className="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 bg-stone-50/50"
+                      placeholder="John Doe"
+                    />
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm font-semibold text-stone-900">Email Address</label>
-                    <input type="email" className="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 bg-stone-50/50" placeholder="john@example.com" />
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 bg-stone-50/50"
+                      placeholder="john@example.com"
+                    />
                   </div>
                 </div>
 
-                <button className="w-full py-4 bg-stone-900 hover:bg-stone-800 text-white rounded-xl font-bold text-lg shadow-lg flex items-center justify-center gap-2 transition-all">
-                  Proceed to Payment <ArrowRight className="w-5 h-5" />
-                </button>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <PaystackButton
+                    {...componentProps}
+                    className="w-full py-4 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl font-bold text-lg shadow-lg flex items-center justify-center gap-2 transition-all"
+                  />
+                  <button
+                    onClick={() => setShowModal(true)}
+                    className="w-full py-4 bg-stone-900 hover:bg-stone-800 text-white rounded-xl font-bold text-lg shadow-lg flex items-center justify-center gap-2 transition-all"
+                  >
+                    Bank Transfer <ArrowRight className="w-5 h-5" />
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -136,7 +181,7 @@ export function Donate() {
                   </div>
                 </li>
               </ul>
-              
+
               <div className="mt-8 pt-8 border-t border-emerald-800">
                 <p className="text-sm text-emerald-300 italic text-center">
                   "Ó Pọọn Mọ, Éyerin Buọ Mọ !"<br />
@@ -148,6 +193,65 @@ export function Donate() {
 
         </div>
       </div>
+
+      {/* Bank Transfer Modal */}
+      {showModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            className="bg-white rounded-3xl p-8 max-w-md w-full shadow-2xl relative"
+          >
+            <button
+              onClick={() => setShowModal(false)}
+              className="absolute top-6 right-6 p-2 rounded-full hover:bg-stone-100 transition-colors"
+            >
+              <X className="w-5 h-5 text-stone-500" />
+            </button>
+
+            <h3 className="text-2xl font-bold text-stone-900 mb-6 flex items-center gap-3">
+              <Building2 className="w-6 h-6 text-emerald-600" />
+              Bank Transfer Details
+            </h3>
+
+            <div className="space-y-4 mb-8 text-stone-600">
+              <p>
+                Thank you, <strong className="text-stone-900">{name || 'Supporter'}</strong>!
+                Please transfer your donation of <strong className="text-emerald-700">₦{amount ? parseInt(amount).toLocaleString() : '0'}</strong> to the official account below.
+              </p>
+
+              <div className="bg-stone-50 rounded-2xl p-6 border border-stone-200 mt-4 space-y-3">
+                <div className="flex flex-col gap-1 border-b border-stone-200 pb-3">
+                  <span className="text-xs font-bold text-stone-400 uppercase tracking-wider">Bank Name</span>
+                  <span className="font-bold text-stone-900">First Bank of Nigeria</span>
+                </div>
+                <div className="flex flex-col gap-1 border-b border-stone-200 pb-3">
+                  <span className="text-xs font-bold text-stone-400 uppercase tracking-wider">Account Number</span>
+                  <span className="font-bold text-stone-900 font-mono text-2xl tracking-widest text-emerald-700">1234567890</span>
+                </div>
+                <div className="flex flex-col gap-1">
+                  <span className="text-xs font-bold text-stone-400 uppercase tracking-wider">Account Name</span>
+                  <span className="font-bold text-stone-900">ACDS Official Donations</span>
+                </div>
+              </div>
+
+              <div className="bg-emerald-50 rounded-xl p-4 mt-4">
+                <p className="text-sm text-emerald-800 text-center font-medium">
+                  Please use your name or "{CAUSES.find(c => c.id === selectedCause)?.title}" as the payment reference.
+                </p>
+              </div>
+            </div>
+
+            <button
+              onClick={() => setShowModal(false)}
+              className="w-full py-4 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl font-bold text-lg shadow-lg flex items-center justify-center gap-2 transition-all hover:-translate-y-1"
+            >
+              I have made the transfer
+            </button>
+          </motion.div>
+        </div>
+      )}
     </div>
   );
 }
