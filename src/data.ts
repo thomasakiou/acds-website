@@ -20,85 +20,91 @@ export const MOCK_MEMBERS: Member[] = [
     email: 'ebiowoubiri@acds.org', phone: '+234 807 234 5678'
   },
   {
-    id: '4', name: 'Engr. Ebimobowei Thomas Akiou', role: 'Assistant Secretary/Communication and Technology Coordinator', isExco: true, joinDate: '2021-02-11',
+    id: '4', name: 'Mr. Ebibo Ford', role: 'Treasurer', isExco: true, joinDate: '2021-05-10',
+    image: '',
+    description: 'A financial expert with a proven track record of managing funds and ensuring the society\'s financial stability.',
+    email: 'ebiboford@acds.org', phone: '+234 807 234 5678'
+  },
+  {
+    id: '5', name: 'Engr. Ebimobowei Thomas Akiou', role: 'Assistant Secretary/Communication and Technology Coordinator', isExco: true, joinDate: '2021-02-11',
     image: '/assets/img/exco/thomas.jpeg',
     description: 'A computer engineer and technology enthusiast committed to enhancing the society\'s digital presence and communication infrastructure.',
     email: 'ebimobowei.thomas@acds.org', phone: '+234 809 345 6789'
   },
   {
-    id: '5', name: 'Mr. Andrew Okorowanta', role: 'Membership Coordinator', isExco: true, joinDate: '2022-08-05',
+    id: '6', name: 'Mr. Andrew Okorowanta', role: 'Membership Coordinator', isExco: true, joinDate: '2022-08-05',
     image: '',
     description: 'A dynamic membership coordinator who ensures the society\'s membership grows and stays connected.',
     email: 'andrew.okorowanta@acds.org', phone: '+234 802 456 7890'
   },
   {
-    id: '6', name: 'Mr. Adoewori Fredrick', role: 'Public Relations Coordinator', isExco: true, joinDate: '2022-08-05',
+    id: '7', name: 'Mr. Adoewori Fredrick', role: 'Public Relations Coordinator', isExco: true, joinDate: '2022-08-05',
     image: '',
     description: 'A dynamic public relations coordinator who ensures the society\'s public relations grows and stays connected.',
     email: 'adoewori.fredrick@acds.org', phone: '+234 802 456 7890'
   },
   {
-    id: '7', name: 'Mr. Waibodei Peter Yeri', role: 'Community Research & Documentation Coordinator', isExco: true, joinDate: '2022-08-05',
+    id: '8', name: 'Mr. Waibodei Peter Yeri', role: 'Community Research & Documentation Coordinator', isExco: true, joinDate: '2022-08-05',
     image: '',
     description: 'A dynamic community research & documentation coordinator who ensures the society\'s community research & documentation grows and stays connected.',
     email: 'waibodei.peter@acds.org', phone: '+234 802 456 7890'
   },
   {
-    id: '8', name: 'Mr. Ebidiepere Jasper Akpama', role: 'ACDS Gallery & Social Media Coordinator', isExco: true, joinDate: '2022-08-05',
+    id: '9', name: 'Mr. Ebidiepere Jasper Akpama', role: 'ACDS Gallery & Social Media Coordinator', isExco: true, joinDate: '2022-08-05',
     image: '',
     description: 'A dynamic ACDS gallery & social media coordinator who ensures the society\'s ACDS gallery & social media grows and stays connected.',
     email: 'ebidiepere.jasper@acds.org', phone: '+234 802 456 7890'
   },
   {
-    id: '9', name: 'Mr. Segu Hausa-Ebi Ambaiowei', role: 'Sponsorships Coordinator', isExco: true, joinDate: '2022-08-05',
+    id: '10', name: 'Mr. Segu Hausa-Ebi Ambaiowei', role: 'Sponsorships Coordinator', isExco: true, joinDate: '2022-08-05',
     image: '',
     description: 'A dynamic Sponsorships coordinator who ensures the society\'s Sponsorships grows and stays connected.',
     email: 'segu.ambaiowei@acds.org', phone: '+234 802 456 7890'
   },
   {
-    id: '10', name: 'Mrs. Charity Charles Awortu', role: 'Events Coordinator', isExco: true, joinDate: '2022-08-05',
+    id: '11', name: 'Mrs. Charity Charles Awortu', role: 'Events Coordinator', isExco: true, joinDate: '2022-08-05',
     image: '',
     description: 'A dynamic Events coordinator who ensures the society\'s Events grows and stays connected.',
     email: 'charity.awortu@acds.org', phone: '+234 802 456 7890'
   },
   {
-    id: '11', name: 'Mr. Tuperekeyi Sobai', role: 'Social Media Coordinator', isExco: true, joinDate: '2022-08-05',
+    id: '12', name: 'Mr. Tuperekeyi Sobai', role: 'Social Media Coordinator', isExco: true, joinDate: '2022-08-05',
     image: '',
     description: 'A dynamic Social Media coordinator who ensures the society\'s Social Media grows and stays connected.',
     email: 'tuperekeyi.sobai@acds.org', phone: '+234 802 456 7890'
   },
   {
-    id: '12', name: 'Mr. Ebitonghabofa Natco', role: 'Associate Member', isExco: false, joinDate: '2023-01-12',
+    id: '13', name: 'Mr. Ebitonghabofa Natco', role: 'Associate Member', isExco: false, joinDate: '2023-01-12',
     image: '',
     description: 'An active community volunteer passionate about youth mentorship and environmental sustainability.',
     email: 'ebitonghabofa.natco@acds.org', phone: '+234 806 567 8901'
   },
   {
-    id: '13', name: 'Mr. Oyeindoubra Nelson Mutu', role: 'Associate Member', isExco: false, joinDate: '2023-04-18',
+    id: '14', name: 'Mr. Oyeindoubra Nelson Mutu', role: 'Associate Member', isExco: false, joinDate: '2023-04-18',
     image: '',
     description: 'A cultural enthusiast with a deep knowledge of Ijaw traditions and a flair for organizing heritage events.',
     email: 'oyeindoubra.nelson@acds.org', phone: '+234 808 678 9012'
   },
   {
-    id: '14', name: 'Mr. Timiyerimene Ayogoi', role: 'Associate Member', isExco: false, joinDate: '2023-06-22',
+    id: '15', name: 'Mr. Timiyerimene Ayogoi', role: 'Associate Member', isExco: false, joinDate: '2023-06-22',
     image: '',
     description: 'A skilled educator contributing to literacy programs and academic excellence initiatives within the community.',
     email: 'timiyerimene.ayogo@acds.org', phone: '+234 701 789 0123'
   },
   {
-    id: '15', name: 'Chief. Eunice Apreala', role: 'Associate Member', isExco: false, joinDate: '2023-09-30',
+    id: '16', name: 'Chief. Eunice Apreala', role: 'Associate Member', isExco: false, joinDate: '2023-09-30',
     image: '',
     description: 'A healthcare advocate working to improve access to medical services across underserved areas of Bayelsa.',
     email: 'eunice.apreala@acds.org', phone: '+234 703 890 1234'
   },
   {
-    id: '16', name: 'Mr. Zozonaebi Fredrick', role: 'Associate Member', isExco: false, joinDate: '2024-01-05',
+    id: '17', name: 'Mr. Zozonaebi Fredrick', role: 'Associate Member', isExco: false, joinDate: '2024-01-05',
     image: '',
     description: 'An entrepreneur and tech enthusiast driving digital literacy and innovation among the youth.',
     email: 'zozonaebi.fredrick@acds.org', phone: '+234 705 901 2345'
   },
   {
-    id: '17', name: 'Mr. Pere-Ebi Mark', role: 'Associate Member', isExco: false, joinDate: '2024-01-05',
+    id: '18', name: 'Mr. Pere-Ebi Mark', role: 'Associate Member', isExco: false, joinDate: '2024-01-05',
     image: '',
     description: 'An entrepreneur and tech enthusiast driving digital literacy and innovation among the youth.',
     email: 'pere-ebi.mark@acds.org', phone: '+234 705 901 2345'
