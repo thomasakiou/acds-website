@@ -10,13 +10,13 @@ export function Home() {
       <section className="relative w-full h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-stone-900">
           {/* Background image overlay */}
-          <div 
+          <div
             className="absolute inset-0 opacity-40 mix-blend-overlay bg-cover bg-center"
             style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1547471080-7cb2a65492d5?auto=format&fit=crop&q=80&w=2000")' }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-900/80 to-stone-900/30" />
         </div>
-        
+
         <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -24,19 +24,19 @@ export function Home() {
             transition={{ duration: 0.8 }}
           >
             <span className="inline-block py-1 px-3 rounded-full bg-emerald-900/50 border border-emerald-500/30 text-emerald-400 text-sm font-semibold tracking-wider mb-6">
-              Southern Ijaw, Bayelsa State
+              SLOGAN: Ó Pọọn Mọ, Éyerin Buọ Mọ !
             </span>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               Amassoma Cultural & <br className="hidden md:block" />
               Development Society
             </h1>
-            
+
             <div className="bg-stone-800/50 backdrop-blur-sm border border-stone-700/50 p-6 rounded-2xl max-w-2xl mx-auto mb-10">
-              <p className="text-2xl md:text-3xl font-medium text-emerald-400 italic mb-2">
-                "Ó Pọọn Mọ, Éyerin Buọ Mọ !"
+              <p className="text-lg md:text-xl font-semibold text-emerald-300 mb-2">
+                "Preserving Our Past, Enriches Our Future"
               </p>
-              <p className="text-stone-300 text-lg">
-                Our Language and Our Heritage!
+              <p className="text-xl md:text-2xl font-medium text-emerald-400 italic">
+                "Ȏ bọdẹi ẹyerin buọ bo kokomẹnẹ mẹ, dẹin bai kpọ zuọmẹnẹ"
               </p>
             </div>
 
@@ -62,26 +62,26 @@ export function Home() {
       <section className="py-20 bg-stone-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold text-stone-900 mb-4">Preserving Our Roots, Empowering Our Future</h2>
+            <h2 className="text-3xl font-bold text-stone-900 mb-4">Preserving Our Past, Enriching Our Future</h2>
             <p className="text-stone-600 text-lg">
               ACDS is dedicated to uniting the people of Amassoma, promoting our rich cultural heritage, and driving sustainable community development projects in Southern Ijaw.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <FeatureCard 
+            <FeatureCard
               icon={<BookOpen className="w-8 h-8 text-emerald-600" />}
               title="Community Archive"
               description="Access a rich collection of cultural news, historical articles, and resources about the Amassoma people and Ijaw heritage."
               link="/archive"
             />
-            <FeatureCard 
+            <FeatureCard
               icon={<Calendar className="w-8 h-8 text-emerald-600" />}
               title="Events & Festivals"
               description="Stay updated on community gatherings, cultural festivals like Seigbein, meetings, and society symposiums."
               link="/events"
             />
-            <FeatureCard 
+            <FeatureCard
               icon={<Users className="w-8 h-8 text-emerald-600" />}
               title="Members Directory"
               description="Connect with fellow sons and daughters of Amassoma. View our executive committee and active members."

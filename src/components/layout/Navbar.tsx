@@ -8,6 +8,7 @@ const NAV_LINKS = [
   { name: 'Home', path: '/' },
   { name: 'Archive & News', path: '/archive' },
   { name: 'Events', path: '/events' },
+  { name: 'Projects', path: '/projects' },
   { name: 'Exco & Members', path: '/directory' },
   { name: 'Register', path: '/register' },
 ];
@@ -40,8 +41,8 @@ export function Navbar() {
                 to={link.path}
                 className={cn(
                   "px-4 py-2 rounded-md text-sm font-medium transition-colors",
-                  location.pathname === link.path 
-                    ? "bg-emerald-900/50 text-emerald-400" 
+                  location.pathname === link.path
+                    ? "bg-emerald-900/50 text-emerald-400"
                     : "text-stone-300 hover:bg-stone-800 hover:text-white"
                 )}
               >

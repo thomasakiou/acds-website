@@ -11,6 +11,14 @@ export function Footer() {
             <p className="text-sm leading-relaxed max-w-xs">
               Amassoma Cultural and Development Society (ACDS) promotes the culture, heritage, and language of the Amassoma people in Southern Ijaw Local Government Area, Bayelsa State.
             </p>
+            <div className="mt-4 pt-4 border-t border-stone-800">
+              <p className="text-xs text-emerald-400 font-semibold italic">
+                "Preserving Our Past, Enriches Our Future"
+              </p>
+              <p className="text-xs text-stone-500 italic mt-1">
+                "O̒ bọdẹi ẹyerin buọ bo kokomẹnẹ mẹ, dẹin bai kpọ zuọmẹnẹ"
+              </p>
+            </div>
           </div>
           <div>
             <h3 className="text-white font-bold text-lg mb-4">Quick Links</h3>
@@ -26,7 +34,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>Amassoma, Southern Ijaw LGA</li>
               <li>Bayelsa State, Nigeria</li>
-              <li>Email: info@acds-amassoma.org</li>
+              <li>Email: acdscommunity2000@gmail.com</li>
             </ul>
           </div>
           <div>
@@ -35,14 +43,14 @@ export function Footer() {
               Subscribe to get the latest society news and event announcements.
             </p>
             <form className="flex flex-col gap-2" onSubmit={(e) => e.preventDefault()}>
-              <input 
-                type="email" 
-                placeholder="Your email address" 
+              <input
+                type="email"
+                placeholder="Your email address"
                 className="bg-stone-900 border border-stone-800 rounded-md px-3 py-2 text-sm text-stone-200 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all"
                 required
               />
-              <button 
-                type="submit" 
+              <button
+                type="submit"
                 className="bg-emerald-600 hover:bg-emerald-500 text-white rounded-md px-3 py-2 text-sm font-semibold transition-colors"
               >
                 Subscribe
@@ -50,7 +58,7 @@ export function Footer() {
             </form>
           </div>
         </div>
-        
+
         <div className="pt-8 border-t border-stone-800 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs">
             © {new Date().getFullYear()} Amassoma Cultural and Development Society. All rights reserved.

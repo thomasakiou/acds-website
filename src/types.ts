@@ -5,6 +5,9 @@ export interface Member {
   isExco: boolean;
   image?: string;
   joinDate: string;
+  description?: string;
+  email?: string;
+  phone?: string;
 }
 
 export interface Article {
@@ -23,4 +26,17 @@ export interface AppEvent {
   date: string;
   location: string;
   description: string;
+  link?: string;
+  linkLabel?: string;
+}
+
+export interface Project {
+  id: string;
+  title: string;
+  status: 'Active' | 'Completed' | 'Upcoming';
+  summary: string;
+  description: string;
+  link?: string;
+  linkLabel?: string;
+  imageUrl?: string;
 }
