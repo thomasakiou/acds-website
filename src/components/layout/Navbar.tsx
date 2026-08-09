@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Globe, Heart } from 'lucide-react';
+import { Menu, X, Heart } from 'lucide-react';
 import { cn } from '../../lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -23,9 +23,10 @@ export function Navbar() {
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0 flex items-center gap-3">
             <Link to="/" className="flex items-center gap-3 group">
-              <div className="w-10 h-10 bg-emerald-700 rounded-full flex items-center justify-center text-white group-hover:bg-emerald-600 transition-colors">
+           /* <div className="w-10 h-10 bg-emerald-700 rounded-full flex items-center justify-center text-white group-hover:bg-emerald-600 transition-colors">
                 <Globe className="w-6 h-6" />
-              </div>
+              </div> */}
+              <img src="/assets/img/logo/acds-logo1.png" alt="ACDS Logo" className="w-15 h-15 object-contain" />
               <div className="flex flex-col">
                 <span className="font-bold text-xl tracking-tight leading-none">ACDS</span>
                 <span className="text-[10px] text-emerald-400 font-medium tracking-wider uppercase mt-1">Amassoma Cultural & Development Society</span>
