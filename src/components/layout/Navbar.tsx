@@ -23,7 +23,7 @@ export function Navbar() {
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0 flex items-center gap-3">
             <Link to="/" className="flex items-center gap-3 group">
-           /* <div className="w-10 h-10 bg-emerald-700 rounded-full flex items-center justify-center text-white group-hover:bg-emerald-600 transition-colors">
+              {/* <div className="w-10 h-10 bg-emerald-700 rounded-full flex items-center justify-center text-white group-hover:bg-emerald-600 transition-colors">
                 <Globe className="w-6 h-6" />
               </div> */}
               <img src="/assets/img/logo/acds-logo1.png" alt="ACDS Logo" className="w-15 h-15 object-contain" />
