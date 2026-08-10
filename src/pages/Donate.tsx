@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
-import { Heart, Building2, Book, Anchor, ArrowRight, X } from 'lucide-react';
+import { Heart, Building2, BookOpen, Anchor, ArrowRight, X, Music } from 'lucide-react';
 import { PaystackButton } from 'react-paystack';
 import { motion } from 'framer-motion';
 
 const CAUSES = [
-  { id: 'edu', title: 'Scholarship Fund', icon: <Book className="w-5 h-5" /> },
+  { id: 'language', title: 'Language Preservation', icon: <BookOpen className="w-5 h-5" /> },
+  { id: 'culture', title: 'Cultural Preservation', icon: <Music className="w-5 h-5" /> },
   { id: 'infra', title: 'Community Infrastructure', icon: <Building2 className="w-5 h-5" /> },
-  { id: 'culture', title: 'Cultural Preservation', icon: <Anchor className="w-5 h-5" /> },
   { id: 'general', title: 'General Support', icon: <Heart className="w-5 h-5" /> }
 ];
 
 export function Donate() {
   const [amount, setAmount] = useState('10000');
-  const [selectedCause, setSelectedCause] = useState('general');
+  const [selectedCause, setSelectedCause] = useState('language');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [showModal, setShowModal] = useState(false);
@@ -162,22 +162,22 @@ export function Donate() {
                 <li className="flex gap-4">
                   <div className="w-8 h-8 rounded-full bg-emerald-800 flex items-center justify-center flex-shrink-0 mt-1">1</div>
                   <div>
-                    <strong className="block text-white mb-1">Education First</strong>
-                    <p className="text-sm text-emerald-200/80">Help us sponsor brilliant sons and daughters of Amassoma through university.</p>
+                    <strong className="block text-white mb-1">Language Preservation</strong>
+                    <p className="text-sm text-emerald-200/80">Sponsor young language learners and ACDS programs keeping the Amassoma dialect of Izon alive.</p>
                   </div>
                 </li>
                 <li className="flex gap-4">
                   <div className="w-8 h-8 rounded-full bg-emerald-800 flex items-center justify-center flex-shrink-0 mt-1">2</div>
                   <div>
-                    <strong className="block text-white mb-1">Cultural Festivals</strong>
-                    <p className="text-sm text-emerald-200/80">Support events like Seigbein that keep our heritage alive.</p>
+                    <strong className="block text-white mb-1">Cultural Heritage</strong>
+                    <p className="text-sm text-emerald-200/80">Support festivals like Seigbein and history documentation that keep our identity alive.</p>
                   </div>
                 </li>
                 <li className="flex gap-4">
                   <div className="w-8 h-8 rounded-full bg-emerald-800 flex items-center justify-center flex-shrink-0 mt-1">3</div>
                   <div>
                     <strong className="block text-white mb-1">Community Growth</strong>
-                    <p className="text-sm text-emerald-200/80">Fund local infrastructure repairs and youth empowerment programs.</p>
+                    <p className="text-sm text-emerald-200/80">Fund local infrastructure and programs that strengthen the Amassoma community.</p>
                   </div>
                 </li>
               </ul>

@@ -103,7 +103,7 @@ export function Home() {
         <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Support Local Development</h2>
           <p className="text-stone-400 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
-            Your contributions directly fund educational scholarships, infrastructure improvements, and cultural preservation initiatives in Amassoma. Join hands with us to build a better tomorrow for our community.
+            Your contributions directly fund language preservation programs, cultural heritage initiatives, and community development in Amassoma. Help us keep the Amassoma dialect of the Izon language alive for future generations.
           </p>
           <Link
             to="/donate"

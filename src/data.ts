@@ -160,35 +160,38 @@ All members of the Amassoma diaspora are warmly invited to return home for this 
   },
   {
     id: '3',
-    title: 'ACDS Launches New Educational Scholarship for Indigenes',
-    summary: 'In line with our development goals, the society has launched a new scholarship fund for brilliant students from Southern Ijaw.',
-    content: `The Amassoma Community Development Society (ACDS) is proud to announce the launch of its inaugural Educational Scholarship Fund, a landmark initiative designed to support brilliant and deserving students from Southern Ijaw in pursuing their academic dreams.
+    title: 'ACDS Calls for Sponsorships to Support Amassoma Language Learners',
+    summary: 'ACDS is seeking sponsors to support its growing community of young Izon language learners and help preserve the Amassoma dialect for future generations.',
+    content: `The Amassoma Cultural and Development Society (ACDS) is calling on individuals, businesses, and diaspora members to sponsor its language preservation programs — one of the most urgent and meaningful ways to support the Amassoma community today.
 
-The scholarship program reflects the ACDS's core belief that education is the most powerful tool for community development. By investing in the intellectual capital of our youth, we are investing in the future of Amassoma and the broader Southern Ijaw community.
+The Amassoma dialect of the Izon language is a living treasure. It carries centuries of history, wisdom, and identity. Yet like many minority languages around the world, it faces the very real threat of decline as younger generations grow up in cities and abroad, disconnected from the tongue of their ancestors. ACDS believes that reversing this trend is not just possible — it is our collective responsibility.
 
-**Scholarship Details:**
+**Why Language Sponsorship?**
 
-The fund will provide financial support to students at various levels of education, from secondary school through university and postgraduate studies. Awards will be based on a combination of academic merit and financial need, ensuring that no deserving student is held back by economic circumstances.
+Academic scholarships are a noble cause, and several other associations within Amassoma already do excellent work in that space. ACDS has chosen to focus its energy where it is most uniquely positioned to make a difference: the preservation of our language, culture, and history. These are areas that, without dedicated effort, risk being lost entirely.
 
-**Eligibility Criteria:**
-- Must be an indigene of Amassoma or Southern Ijaw LGA
-- Must demonstrate strong academic performance (minimum of B average or equivalent)
-- Must show evidence of financial need
-- Must be enrolled in or accepted to a recognized educational institution
-- Must submit two letters of recommendation from community leaders or educators
+**What Your Sponsorship Supports:**
 
-**Award Categories:**
-- Secondary School Excellence Award: Covers school fees and learning materials
-- Undergraduate Scholarship: Covers tuition, accommodation, and a monthly stipend
-- Postgraduate Research Grant: Supports advanced studies and research projects that benefit the community
+- Weekly Amasomo Pọọn Tolumọ Sukulu (Amassoma Language Classes) held every Wednesday via our WhatsApp community group
+- Development of learning materials, audio recordings, and a digital Izon-Amassoma dictionary
+- The Amassoma Hub platform — an interactive web portal for language lessons, history archives, and cultural resources
+- Annual Ama Pọọn Fie Bai (International Mother Language Day) celebrations
+- Documentation of oral histories, proverbs, songs, and traditional knowledge from community elders
 
-**Application Process:**
-Applications are now open and will be accepted through the end of October. Interested candidates should submit their applications through the ACDS website or in person at the society's secretariat. A selection committee comprising educators, community leaders, and ACDS executives will review all applications.
+**How to Sponsor:**
 
-The ACDS extends its heartfelt gratitude to all donors and sponsors who have made this scholarship fund possible. We encourage all members of the Amassoma diaspora to contribute to this fund and help shape the future of our community. Together, we can ensure that every talented young person from our community has the opportunity to reach their full potential.`,
+Sponsors can contribute at any level. Every contribution, large or small, goes directly toward sustaining these programs. Corporate sponsors and diaspora organizations are especially encouraged to partner with ACDS for long-term impact.
+
+To become a sponsor or learn more, visit our Donate page or reach out to the ACDS Communications and Technology Coordinator directly.
+
+**A Word from ACDS:**
+
+"When a language dies, a world dies with it. The Amassoma dialect of Izon is not just a means of communication — it is the vessel of our history, our songs, our proverbs, and our identity. We owe it to our ancestors and our children to keep it alive. We cannot do this alone. We need your support."
+
+Join us. Sponsor a language learner. Preserve a legacy.`,
     date: '2026-07-15',
     category: 'News',
-    imageUrl: '/assets/img/article/scholarship.jpg'
+    imageUrl: '/assets/img/article/language.jpg'
   }
 ];
 
