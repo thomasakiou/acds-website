@@ -28,6 +28,7 @@ export interface AppEvent {
   description: string;
   link?: string;
   linkLabel?: string;
+  calendarDate?: string;
 }
 
 export interface Project {

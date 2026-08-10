@@ -220,6 +220,14 @@ export const MOCK_EVENTS: AppEvent[] = [
     date: 'Once every year',
     location: 'Amassoma community, Southern Ijaw LGA, Bayelsa State',
     description: 'Annual symposium discussing the future of our heritage and language preservation.'
+  },
+  {
+    id: '4',
+    title: 'Amassoma Dialect Standardization Conference',
+    date: 'November 2026',
+    location: 'Amassoma Community, Southern Ijaw LGA, Bayelsa State',
+    description: 'A landmark conference bringing together linguists, elders, educators, and community members to establish a standardized written and spoken form of the Amassoma dialect of the Izon language. This is a historic step toward ensuring the dialect can be formally taught, documented, and preserved for generations to come.',
+    calendarDate: '20261101'
   }
 ];
 

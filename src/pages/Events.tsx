@@ -1,6 +1,6 @@
 import React from 'react';
 import { MOCK_EVENTS } from '../data';
-import { Calendar as CalendarIcon, MapPin, Clock, ExternalLink } from 'lucide-react';
+import { Calendar as CalendarIcon, MapPin, Clock, ExternalLink, CalendarPlus } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export function Events() {
@@ -63,11 +63,17 @@ export function Events() {
                     <ExternalLink className="w-4 h-4" />
                     {event.linkLabel || 'Join Group'}
                   </a>
-                ) : (
-                  <button className="w-full md:w-auto px-6 py-2.5 bg-stone-900 hover:bg-stone-800 text-white font-semibold rounded-full transition-colors text-sm shadow-sm">
-                    RSVP
-                  </button>
-                )}
+                ) : event.calendarDate ? (
+                  <a
+                    href={`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(event.title)}&dates=${event.calendarDate}/${event.calendarDate}&location=${encodeURIComponent(event.location)}&details=${encodeURIComponent(event.description)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full md:w-auto inline-flex items-center justify-center gap-2 px-6 py-2.5 bg-stone-900 hover:bg-stone-800 text-white font-semibold rounded-full transition-colors text-sm shadow-sm"
+                  >
+                    <CalendarPlus className="w-4 h-4" />
+                    Add to Calendar
+                  </a>
+                ) : null}
               </div>
             </motion.div>
           ))}
