@@ -34,7 +34,7 @@ export function Register() {
           animate={{ opacity: 1, scale: 1 }}
           className="bg-white max-w-md w-full p-8 rounded-3xl shadow-xl text-center border border-stone-100"
         >
-          <div className="w-20 h-20 bg-gold-100 rounded-full flex items-center justify-center mx-auto mb-6">
+          <div className="w-20 h-20 bg-forest-100 rounded-full flex items-center justify-center mx-auto mb-6">
             <CheckCircle2 className="w-10 h-10 text-forest-600" />
           </div>
           <h2 className="text-2xl font-bold text-stone-900 mb-4">Application Received!</h2>
@@ -57,7 +57,7 @@ export function Register() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="text-center mb-10">
-          <div className="w-16 h-16 bg-gold-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="w-16 h-16 bg-forest-100 rounded-full flex items-center justify-center mx-auto mb-4">
             <UserPlus className="w-8 h-8 text-forest-600" />
           </div>
           <h1 className="text-3xl md:text-4xl font-bold text-stone-900 mb-4">Join ACDS</h1>
@@ -109,7 +109,7 @@ export function Register() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-4 bg-gold-500 hover:bg-gold-400 text-forest-900 rounded-xl font-bold text-lg shadow-lg hover:shadow-gold-400/30 transition-all disabled:opacity-60"
+              className="w-full py-4 bg-forest-600 hover:bg-forest-500 text-white rounded-xl font-bold text-lg shadow-lg hover:shadow-forest-600/30 transition-all disabled:opacity-60"
             >
               {loading ? 'Submitting...' : 'Submit Application'}
             </button>
