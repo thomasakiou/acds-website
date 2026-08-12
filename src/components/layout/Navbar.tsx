@@ -24,7 +24,7 @@ export function Navbar() {
           <div className="flex-shrink-0 flex items-center gap-3">
             <Link to="/" className="flex items-center gap-3 group">
               <motion.img
-                src="/assets/img/logo/acds-logo1.png"
+                src="/assets/img/logo/acds-logo3.png"
                 alt="ACDS Logo"
                 className="w-15 h-15 object-contain"
                 whileHover={{ rotate: [0, -10, 10, -6, 6, 0], scale: 1.15 }}
