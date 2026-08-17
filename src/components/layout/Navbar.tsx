@@ -9,7 +9,7 @@ const NAV_LINKS = [
   { name: 'Archive & News', path: '/archive' },
   { name: 'Events', path: '/events' },
   { name: 'Projects', path: '/projects' },
-  { name: 'Exco & Members', path: '/directory' },
+  { name: 'Membership', path: '/directory' },
   { name: 'Register', path: '/register' },
 ];
 

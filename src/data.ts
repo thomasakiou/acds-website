@@ -2,112 +2,112 @@ import { Article, Member, AppEvent, Project } from './types';
 
 export const MOCK_MEMBERS: Member[] = [
   {
-    id: '1', name: 'Mr. Akpoebi Okorowanta', role: 'Chairman', isExco: true, joinDate: '2020-01-15',
+    id: '1', name: 'Mr. Akpoebi Okorowanta', role: 'Chairman', category: 'Founder', joinDate: '2020-01-15',
     image: '',
     description: 'A visionary community leader with years of experience in cultural advocacy and grassroots development across the Niger Delta.',
-    email: 'akpoebiokorowanta@acds.org', phone: '+234 803 456 7890'
+    email: 'akpoebiokorowanta@acdscommunity.org', phone: '+234 803 456 7890'
   },
   {
-    id: '2', name: 'High Chief. Eric Ricky Avi', role: 'Vice Chairman', isExco: true, joinDate: '2020-03-20',
+    id: '2', name: 'High Chief. Eric Ricky Avi', role: 'Vice Chairman', category: 'Founder', joinDate: '2020-03-20',
     image: '',
     description: 'An academic and peace-building expert dedicated to bridging education and community empowerment in Southern Ijaw.',
-    email: 'ericrickyavi@acds.org', phone: '+234 805 123 4567'
+    email: 'chiefericavi@acdscommunity.org', phone: '+234 805 123 4567'
   },
   {
-    id: '3', name: 'Ms. Ebi Owoubiri', role: 'Secretary', isExco: true, joinDate: '2021-05-10',
+    id: '3', name: 'Ms. Ebi Owoubiri', role: 'Secretary', category: 'Founder', joinDate: '2021-05-10',
     image: '',
     description: 'An accomplished administrator who ensures the society\'s operations run smoothly and all members stay informed and connected.',
-    email: 'ebiowoubiri@acds.org', phone: '+234 807 234 5678'
+    email: 'ebiowoubiri@acdscommunity.org', phone: '+234 807 234 5678'
   },
   {
-    id: '4', name: 'Mr. Ebibo Ford', role: 'Treasurer', isExco: true, joinDate: '2021-05-10',
+    id: '4', name: 'Mr. Ebibo Ford', role: 'Treasurer', category: 'Management Committee', joinDate: '2021-05-10',
     image: '',
     description: 'A financial expert with a proven track record of managing funds and ensuring the society\'s financial stability.',
-    email: 'ebiboford@acds.org', phone: '+234 807 234 5678'
+    email: 'ebiboford@acdscommunity.org', phone: '+234 807 234 5678'
   },
   {
-    id: '5', name: 'Engr. Ebimobowei Thomas Akiou', role: 'Assistant Secretary/Communication and Technology Coordinator', isExco: true, joinDate: '2021-02-11',
+    id: '5', name: 'Engr. Ebimobowei Thomas Akiou', role: 'Assistant Secretary/Communication and Technology Coordinator', category: 'Management Committee', joinDate: '2021-02-11',
     image: '/assets/img/exco/thomas.jpeg',
     description: 'A computer engineer and technology enthusiast committed to enhancing the society\'s digital presence and communication infrastructure.',
-    email: 'ebimobowei.thomas@acds.org', phone: '+234 809 345 6789'
+    email: 'ebimoboweithomas@acdscommunity.org', phone: '+234 809 345 6789'
   },
   {
-    id: '6', name: 'Mr. Andrew Okorowanta', role: 'Membership Coordinator', isExco: true, joinDate: '2022-08-05',
+    id: '6', name: 'Mr. Andrew Okorowanta', role: 'Assistant Tresurer/Membership Coordinator', category: 'Management Committee', joinDate: '2022-08-05',
     image: '',
     description: 'A dynamic membership coordinator who ensures the society\'s membership grows and stays connected.',
-    email: 'andrew.okorowanta@acds.org', phone: '+234 802 456 7890'
+    email: 'andrewokorowanta@acdscommunity.org', phone: '+234 802 456 7890'
   },
   {
-    id: '7', name: 'Mr. Adoewori Fredrick', role: 'Public Relations Coordinator', isExco: true, joinDate: '2022-08-05',
+    id: '7', name: 'Mr. Adoewori Fredrick', role: 'Public Relations Coordinator', category: 'Management Committee', joinDate: '2022-08-05',
     image: '',
     description: 'A dynamic public relations coordinator who ensures the society\'s public relations grows and stays connected.',
-    email: 'adoewori.fredrick@acds.org', phone: '+234 802 456 7890'
+    email: 'adoeworifredrick@acdscommunity.org', phone: '+234 802 456 7890'
   },
   {
-    id: '8', name: 'Mr. Waibodei Peter Yeri', role: 'Community Research & Documentation Coordinator', isExco: true, joinDate: '2022-08-05',
+    id: '8', name: 'Mr. Waibodei Peter Yeri', role: 'Community Research & Documentation Coordinator', category: 'Management Committee', joinDate: '2022-08-05',
     image: '',
     description: 'A dynamic community research & documentation coordinator who ensures the society\'s community research & documentation grows and stays connected.',
-    email: 'waibodei.peter@acds.org', phone: '+234 802 456 7890'
+    email: 'waibodeipeter@acdscommunity.org', phone: '+234 802 456 7890'
   },
   {
-    id: '9', name: 'Mr. Ebidiepere Jasper Akpama', role: 'ACDS Gallery & Social Media Coordinator', isExco: true, joinDate: '2022-08-05',
+    id: '9', name: 'Mr. Ebidiepere Jasper Akpama', role: 'ACDS Gallery & Social Media Coordinator', category: 'Management Committee', joinDate: '2022-08-05',
     image: '',
     description: 'A dynamic ACDS gallery & social media coordinator who ensures the society\'s ACDS gallery & social media grows and stays connected.',
-    email: 'ebidiepere.jasper@acds.org', phone: '+234 802 456 7890'
+    email: 'ebidieperejasper@acdscommunity.org', phone: '+234 802 456 7890'
   },
   {
-    id: '10', name: 'Mr. Segu Hausa-Ebi Ambaiowei', role: 'Sponsorships Coordinator', isExco: true, joinDate: '2022-08-05',
+    id: '10', name: 'Mr. Segu Hausa-Ebi Ambaiowei', role: 'Sponsorships Coordinator', category: 'Management Committee', joinDate: '2022-08-05',
     image: '',
     description: 'A dynamic Sponsorships coordinator who ensures the society\'s Sponsorships grows and stays connected.',
-    email: 'segu.ambaiowei@acds.org', phone: '+234 802 456 7890'
+    email: 'seguambaiowei@acdscommunity.org', phone: '+234 802 456 7890'
   },
   {
-    id: '11', name: 'Mrs. Charity Charles Awortu', role: 'Events Coordinator', isExco: true, joinDate: '2022-08-05',
+    id: '11', name: 'Mrs. Charity Charles Awortu', role: 'Events Coordinator', category: 'Management Committee', joinDate: '2022-08-05',
     image: '',
     description: 'A dynamic Events coordinator who ensures the society\'s Events grows and stays connected.',
-    email: 'charity.awortu@acds.org', phone: '+234 802 456 7890'
+    email: 'charityawortu@acdscommunity.org', phone: '+234 802 456 7890'
   },
   {
-    id: '12', name: 'Mr. Tuperekeyi Sobai', role: 'Social Media Coordinator', isExco: true, joinDate: '2022-08-05',
+    id: '12', name: 'Mr. Tuperekeyi Sobai', role: 'Social Media Coordinator', category: 'Management Committee', joinDate: '2022-08-05',
     image: '',
     description: 'A dynamic Social Media coordinator who ensures the society\'s Social Media grows and stays connected.',
-    email: 'tuperekeyi.sobai@acds.org', phone: '+234 802 456 7890'
+    email: 'tuperekeyisobai@acdscommunity.org', phone: '+234 802 456 7890'
   },
   {
-    id: '13', name: 'Mr. Ebitonghabofa Natco', role: 'Associate Member', isExco: false, joinDate: '2023-01-12',
+    id: '13', name: 'Mr. Ebitonghabofa Natco', role: 'Full Member', category: 'Full Member', joinDate: '2023-01-12',
     image: '',
     description: 'An active community volunteer passionate about youth mentorship and environmental sustainability.',
-    email: 'ebitonghabofa.natco@acds.org', phone: '+234 806 567 8901'
+    email: 'ebitonghabofanatco@acdscommunity.org', phone: '+234 806 567 8901'
   },
   {
-    id: '14', name: 'Mr. Oyeindoubra Nelson Mutu', role: 'Associate Member', isExco: false, joinDate: '2023-04-18',
+    id: '14', name: 'Mr. Oyeindoubra Nelson Mutu', role: 'Full Member', category: 'Full Member', joinDate: '2023-04-18',
     image: '',
     description: 'A cultural enthusiast with a deep knowledge of Ijaw traditions and a flair for organizing heritage events.',
-    email: 'oyeindoubra.nelson@acds.org', phone: '+234 808 678 9012'
+    email: 'oyeindoubranelson@acdscommunity.org', phone: '+234 808 678 9012'
   },
   {
-    id: '15', name: 'Mr. Timiyerimene Ayogoi', role: 'Associate Member', isExco: false, joinDate: '2023-06-22',
+    id: '15', name: 'Mr. Timiyerimene Ayogoi', role: 'Associate Member', category: 'Associate Member', joinDate: '2023-06-22',
     image: '',
     description: 'A skilled educator contributing to literacy programs and academic excellence initiatives within the community.',
-    email: 'timiyerimene.ayogo@acds.org', phone: '+234 701 789 0123'
+    email: 'timiyerimeneayogo@acdscommunity.org', phone: '+234 701 789 0123'
   },
   {
-    id: '16', name: 'Chief. Eunice Apreala', role: 'Associate Member', isExco: false, joinDate: '2023-09-30',
+    id: '16', name: 'Chief. Eunice Apreala', role: 'Associate Member', category: 'Associate Member', joinDate: '2023-09-30',
     image: '',
     description: 'A healthcare advocate working to improve access to medical services across underserved areas of Bayelsa.',
-    email: 'eunice.apreala@acds.org', phone: '+234 703 890 1234'
+    email: 'euniceapreala@acdscommunity.org', phone: '+234 703 890 1234'
   },
   {
-    id: '17', name: 'Mr. Zozonaebi Fredrick', role: 'Associate Member', isExco: false, joinDate: '2024-01-05',
+    id: '17', name: 'Mr. Zozonaebi Fredrick', role: 'Associate Member', category: 'Associate Member', joinDate: '2024-01-05',
     image: '',
     description: 'An entrepreneur and tech enthusiast driving digital literacy and innovation among the youth.',
-    email: 'zozonaebi.fredrick@acds.org', phone: '+234 705 901 2345'
+    email: 'zozonaebifredrick@acdscommunity.org', phone: '+234 705 901 2345'
   },
   {
-    id: '18', name: 'Mr. Pere-Ebi Mark', role: 'Associate Member', isExco: false, joinDate: '2024-01-05',
+    id: '18', name: 'Mr. Pere-Ebi Mark', role: 'Associate Member', category: 'Associate Member', joinDate: '2024-01-05',
     image: '',
     description: 'An entrepreneur and tech enthusiast driving digital literacy and innovation among the youth.',
-    email: 'pere-ebi.mark@acds.org', phone: '+234 705 901 2345'
+    email: 'pere-ebimark@acdscommunity.org', phone: '+234 705 901 2345'
   },
 ];
 
@@ -191,13 +191,21 @@ To become a sponsor or learn more, visit our Donate page or reach out to the ACD
 Join us. Sponsor a language learner. Preserve a legacy.`,
     date: '2026-07-15',
     category: 'News',
-    imageUrl: '/assets/img/article/language.jpg'
+    imageUrl: '/assets/img/article/scholarship.jpg'
   }
 ];
 
 export const MOCK_EVENTS: AppEvent[] = [
   {
     id: '1',
+    title: 'Amassoma Dialect Standardization Conference',
+    date: 'November 2026',
+    location: 'Amassoma Community, Southern Ijaw LGA, Bayelsa State',
+    description: 'A landmark conference bringing together linguists, elders, educators, and community members to establish a standardized written and spoken form of the Amassoma dialect of the Izon language. This is a historic step toward ensuring the dialect can be formally taught, documented, and preserved for generations to come.',
+    calendarDate: '20261101'
+  },
+  {
+    id: '2',
     title: 'Amasomo Pọọn Tolumọ Sukulu (Amassoma Language Class)',
     date: 'Every Wednesday 4:00 to 5:30 p.m. Nigerian Time.',
     location: 'ACDS Amasomo Pọọn Fie Ogbo Whatsapp group',
@@ -206,34 +214,42 @@ export const MOCK_EVENTS: AppEvent[] = [
     linkLabel: 'Join Group'
   },
   {
-    id: '2',
-    title: 'Tomubọlọu-Efiẹ (Community Town Hall)',
-    date: 'Every 3rd Friday of the month by 7pm Nigerian Time',
+    id: '3',
+    title: 'Amasomo Pọọn Tolumọ Sukulu (History of Amassoma)',
+    date: 'Every 3rd Wednessday of the month',
     location: 'ACDS Tomubọlọu-Efiẹ Whatsapp group',
-    description: 'Our regular monthly town hall meeting to discuss issues affecting the Amassoma community.',
+    description: 'Our monthly gathering where we learn the history of Ammassoma during our language class.',
     link: 'https://chat.whatsapp.com/EvgrPWRHCusLNxHa6BsQdR',
     linkLabel: 'Join Group'
   },
   {
-    id: '3',
-    title: 'Ama Pọọn Fie Bai (International Mother Language Day)',
-    date: 'Once every year',
-    location: 'Amassoma community, Southern Ijaw LGA, Bayelsa State',
-    description: 'Annual symposium discussing the future of our heritage and language preservation.'
+    id: '4',
+    title: 'Tomubọlọu-Efiẹ (Community Town Hall)',
+    date: 'Every 3rd Friday of the month by 7pm Nigerian Time',
+    location: 'ACDS Tomubọlọu-Efiẹ Whatsapp group',
+    description: 'Our regular monthly open mic online meeting to discuss issues affecting the Amassoma community.',
+    link: 'https://chat.whatsapp.com/EvgrPWRHCusLNxHa6BsQdR',
+    linkLabel: 'Join Group'
   },
   {
-    id: '4',
-    title: 'Amassoma Dialect Standardization Conference',
-    date: 'November 2026',
-    location: 'Amassoma Community, Southern Ijaw LGA, Bayelsa State',
-    description: 'A landmark conference bringing together linguists, elders, educators, and community members to establish a standardized written and spoken form of the Amassoma dialect of the Izon language. This is a historic step toward ensuring the dialect can be formally taught, documented, and preserved for generations to come.',
-    calendarDate: '20261101'
+    id: '5',
+    title: 'Ama Pọọn Fie Bai (International Mother Language Day)',
+    date: '21st February every year',
+    location: 'Amassoma community, Southern Ijaw LGA, Bayelsa State',
+    description: 'Annual symposium discussing the future of our heritage and language preservation.'
   }
 ];
 
 export const MOCK_PROJECTS: Project[] = [
   {
     id: '1',
+    title: 'Amassoma Dialect Standardization Conference',
+    status: 'Upcoming',
+    summary: 'A landmark conference to establish a standardized written and spoken form of the Amassoma dialect.',
+    description: 'A landmark conference bringing together linguists, elders, educators, and community members to establish a standardized written and spoken form of the Amassoma dialect of the Izon language. This historic initiative will lay the groundwork for the dialect to be formally documented and preserved for generations to come. The conference will feature panel discussions, workshops on orthography development, and collaborative sessions to agree on spelling conventions, tone marking, and grammatical standards.',
+  },
+  {
+    id: '2',
     title: 'Amassoma Hub Platform',
     status: 'Active',
     summary: 'Centralized digital platform for learning the Amassoma language.',

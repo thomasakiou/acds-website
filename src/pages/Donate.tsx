@@ -16,11 +16,14 @@ export function Donate() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [showModal, setShowModal] = useState(false);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formError, setFormError] = useState('');
 
   const publicKey = (import.meta as any).env?.VITE_PAYSTACK_PUBLIC_KEY || "pk_test_626dcb202750117e593afeb8d06a5b20da02dc6e";
 
   const componentProps = {
-    email: email || "supporter@acds.org",
+    email: email || "supporter@acdscommunity.org",
     amount: (parseInt(amount) || 0) * 100, // Paystack requires amount in kobo
     metadata: {
       name: name || "Supporter",
@@ -121,33 +124,56 @@ export function Donate() {
                     <input
                       type="text"
                       value={name}
-                      onChange={(e) => setName(e.target.value)}
+                      onChange={(e) => {
+                        setName(e.target.value);
+                        setFormError('');
+                      }}
                       className="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 bg-stone-50/50"
                       placeholder="John Doe"
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-sm font-semibold text-stone-900">Email Address</label>
+                    <label className="text-sm font-semibold text-stone-900">Email or Phone Number</label>
                     <input
-                      type="email"
+                      type="text"
                       value={email}
-                      onChange={(e) => setEmail(e.target.value)}
+                      onChange={(e) => {
+                        setEmail(e.target.value);
+                        setFormError('');
+                      }}
                       className="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 bg-stone-50/50"
-                      placeholder="john@example.com"
+                      placeholder="john@example.com or 080..."
                     />
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <PaystackButton
+                {formError && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="p-3 mt-4 bg-red-50 border border-red-200 rounded-xl text-red-600 text-sm font-semibold flex items-center justify-center gap-2"
+                  >
+                    <X className="w-4 h-4 bg-red-500 text-white rounded-full p-0.5" />
+                    {formError}
+                  </motion.div>
+                )}
+
+                <div className="grid grid-cols-1 gap-4 mt-4">
+                  {/* <PaystackButton
                     {...componentProps}
                     className="w-full py-4 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl font-bold text-lg shadow-lg flex items-center justify-center gap-2 transition-all"
-                  />
+                  /> */}
                   <button
-                    onClick={() => setShowModal(true)}
-                    className="w-full py-4 bg-stone-900 hover:bg-stone-800 text-white rounded-xl font-bold text-lg shadow-lg flex items-center justify-center gap-2 transition-all"
+                    onClick={() => {
+                      if (!name.trim() || !email.trim()) {
+                        setFormError("Please enter your Full Name and Contact Info to proceed.");
+                        return;
+                      }
+                      setShowModal(true);
+                    }}
+                    className="w-full py-4 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl font-bold text-lg shadow-lg flex items-center justify-center gap-2 transition-all"
                   >
-                    Bank Transfer <ArrowRight className="w-5 h-5" />
+                    Donate via Bank Transfer <ArrowRight className="w-5 h-5" />
                   </button>
                 </div>
               </div>
@@ -203,52 +229,121 @@ export function Donate() {
             exit={{ opacity: 0, scale: 0.95 }}
             className="bg-white rounded-3xl p-8 max-w-md w-full shadow-2xl relative"
           >
-            <button
-              onClick={() => setShowModal(false)}
-              className="absolute top-6 right-6 p-2 rounded-full hover:bg-stone-100 transition-colors"
-            >
-              <X className="w-5 h-5 text-stone-500" />
-            </button>
+            {!showSuccessModal ? (
+              <>
+                <button
+                  onClick={() => setShowModal(false)}
+                  className="absolute top-6 right-6 p-2 rounded-full hover:bg-stone-100 transition-colors"
+                >
+                  <X className="w-5 h-5 text-stone-500" />
+                </button>
 
-            <h3 className="text-2xl font-bold text-stone-900 mb-6 flex items-center gap-3">
-              <Building2 className="w-6 h-6 text-emerald-600" />
-              Bank Transfer Details
-            </h3>
+                <h3 className="text-2xl font-bold text-stone-900 mb-6 flex items-center gap-3">
+                  <Building2 className="w-6 h-6 text-emerald-600" />
+                  Bank Transfer Details
+                </h3>
 
-            <div className="space-y-4 mb-8 text-stone-600">
-              <p>
-                Thank you, <strong className="text-stone-900">{name || 'Supporter'}</strong>!
-                Please transfer your donation of <strong className="text-emerald-700">₦{amount ? parseInt(amount).toLocaleString() : '0'}</strong> to the official account below.
-              </p>
+                <div className="space-y-4 mb-8 text-stone-600">
+                  <p>
+                    Thank you, <strong className="text-stone-900">{name || 'Supporter'}</strong>!
+                    Please transfer your donation of <strong className="text-emerald-700">₦{amount ? parseInt(amount).toLocaleString() : '0'}</strong> to the official account below.
+                  </p>
 
-              <div className="bg-stone-50 rounded-2xl p-6 border border-stone-200 mt-4 space-y-3">
-                <div className="flex flex-col gap-1 border-b border-stone-200 pb-3">
-                  <span className="text-xs font-bold text-stone-400 uppercase tracking-wider">Bank Name</span>
-                  <span className="font-bold text-stone-900">First Bank of Nigeria</span>
+                  <div className="bg-stone-50 rounded-2xl p-6 border border-stone-200 mt-4 space-y-3">
+                    <div className="flex flex-col gap-1 border-b border-stone-200 pb-3">
+                      <span className="text-xs font-bold text-stone-400 uppercase tracking-wider">Bank Name</span>
+                      <span className="font-bold text-stone-900">Polaris Bank</span>
+                    </div>
+                    <div className="flex flex-col gap-1 border-b border-stone-200 pb-3">
+                      <span className="text-xs font-bold text-stone-400 uppercase tracking-wider">Account Number</span>
+                      <span className="font-bold text-stone-900 font-mono text-2xl tracking-widest text-emerald-700">1140351284</span>
+                    </div>
+                    <div className="flex flex-col gap-1">
+                      <span className="text-xs font-bold text-stone-400 uppercase tracking-wider">Account Name</span>
+                      <span className="font-bold text-stone-900">Amassoma Cultural and Development Society</span>
+                    </div>
+                  </div>
+
+                  <div className="bg-emerald-50 rounded-xl p-4 mt-4">
+                    <p className="text-sm text-emerald-800 text-center font-medium">
+                      Please use your name or "{CAUSES.find(c => c.id === selectedCause)?.title}" as the payment reference.
+                    </p>
+                  </div>
                 </div>
-                <div className="flex flex-col gap-1 border-b border-stone-200 pb-3">
-                  <span className="text-xs font-bold text-stone-400 uppercase tracking-wider">Account Number</span>
-                  <span className="font-bold text-stone-900 font-mono text-2xl tracking-widest text-emerald-700">1234567890</span>
-                </div>
-                <div className="flex flex-col gap-1">
-                  <span className="text-xs font-bold text-stone-400 uppercase tracking-wider">Account Name</span>
-                  <span className="font-bold text-stone-900">ACDS Official Donations</span>
-                </div>
-              </div>
 
-              <div className="bg-emerald-50 rounded-xl p-4 mt-4">
-                <p className="text-sm text-emerald-800 text-center font-medium">
-                  Please use your name or "{CAUSES.find(c => c.id === selectedCause)?.title}" as the payment reference.
+                <button
+                  disabled={isSubmitting}
+                  onClick={async () => {
+                    setIsSubmitting(true);
+
+                    try {
+                      // Generate donation record data
+                      const date = new Date().toLocaleString();
+                      const causeName = CAUSES.find(c => c.id === selectedCause)?.title || 'General Support';
+
+                      const formData = new FormData();
+                      formData.append("Date", date);
+                      formData.append("Name", name || 'Anonymous Supporter');
+                      formData.append("Email", email || 'Not provided'); // Used for both Email or Phone
+                      formData.append("Amount", amount ? `₦${parseInt(amount).toLocaleString()}` : '0');
+                      formData.append("Cause", causeName);
+                      formData.append("Status", "Pending Verification");
+
+                      const scriptUrl = (import.meta as any).env?.VITE_GOOGLE_SHEETS_URL;
+
+                      if (scriptUrl) {
+                        // Send data to Google Sheets silently
+                        await fetch(scriptUrl, {
+                          method: 'POST',
+                          body: formData,
+                          mode: 'no-cors' // Crucial for avoiding CORS errors with Google Apps Script
+                        });
+                      } else {
+                        console.warn("VITE_GOOGLE_SHEETS_URL is not set. Data not logged to Sheets.");
+                      }
+                    } catch (error) {
+                      console.error("Failed to log to Google Sheets", error);
+                    } finally {
+                      setIsSubmitting(false);
+                      setShowSuccessModal(true);
+                    }
+                  }}
+                  className="w-full py-4 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl font-bold text-lg shadow-lg flex items-center justify-center gap-2 transition-all hover:-translate-y-1 disabled:opacity-70 disabled:hover:translate-y-0"
+                >
+                  {isSubmitting ? "Processing..." : (
+                    <>I have made the transfer</>
+                  )}
+                </button>
+              </>
+            ) : (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="text-center py-6"
+              >
+                <div className="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Heart className="w-10 h-10 text-emerald-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-stone-900 mb-4">Thank You!</h3>
+                <p className="text-stone-600 mb-8 leading-relaxed">
+                  Your generous donation has been recorded. We will verify the transfer shortly.
+                  Thank you for supporting the Amassoma Cultural and Development Society!
                 </p>
-              </div>
-            </div>
-
-            <button
-              onClick={() => setShowModal(false)}
-              className="w-full py-4 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl font-bold text-lg shadow-lg flex items-center justify-center gap-2 transition-all hover:-translate-y-1"
-            >
-              I have made the transfer
-            </button>
+                <button
+                  onClick={() => {
+                    setShowModal(false);
+                    setTimeout(() => {
+                      setShowSuccessModal(false);
+                      setName('');
+                      setEmail('');
+                    }, 300);
+                  }}
+                  className="w-full py-4 bg-stone-900 hover:bg-stone-800 text-white rounded-xl font-bold text-lg shadow-lg flex items-center justify-center gap-2 transition-all hover:-translate-y-1"
+                >
+                  Return to Page
+                </button>
+              </motion.div>
+            )}
           </motion.div>
         </div>
       )}

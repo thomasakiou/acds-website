@@ -2,7 +2,7 @@ export interface Member {
   id: string;
   name: string;
   role: string;
-  isExco: boolean;
+  category: 'Founder' | 'Trustee' | 'Management Committee' | 'Full Member' | 'Associate Member';
   image?: string;
   joinDate: string;
   description?: string;
