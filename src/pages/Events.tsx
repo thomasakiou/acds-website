@@ -65,7 +65,7 @@ export function Events() {
                   </a>
                 ) : event.calendarDate ? (
                   <a
-                    href={`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(event.title)}&dates=${event.calendarDate}/${event.calendarDate}&location=${encodeURIComponent(event.location)}&details=${encodeURIComponent(event.description)}`}
+                    href={`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(event.title)}&dates=${event.calendarDate.includes('-') ? event.calendarDate.replace('-', '/') : `${event.calendarDate}/${event.calendarDate}`}&location=${encodeURIComponent(event.location)}&details=${encodeURIComponent(event.description)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full md:w-auto inline-flex items-center justify-center gap-2 px-6 py-2.5 bg-stone-900 hover:bg-stone-800 text-white font-semibold rounded-full transition-colors text-sm shadow-sm"

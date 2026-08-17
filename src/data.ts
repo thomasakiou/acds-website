@@ -182,13 +182,18 @@ Academic scholarships are a noble cause, and several other associations within A
 
 Sponsors can contribute at any level. Every contribution, large or small, goes directly toward sustaining these programs. Corporate sponsors and diaspora organizations are especially encouraged to partner with ACDS for long-term impact.
 
-To become a sponsor or learn more, visit our Donate page or reach out to the ACDS Communications and Technology Coordinator directly.
+To become a sponsor or learn more, visit our Donate page or reach out to the ACDS Community directly.
 
 **A Word from ACDS:**
 
 "When a language dies, a world dies with it. The Amassoma dialect of Izon is not just a means of communication — it is the vessel of our history, our songs, our proverbs, and our identity. We owe it to our ancestors and our children to keep it alive. We cannot do this alone. We need your support."
 
-Join us. Sponsor a language learner. Preserve a legacy.`,
+Join us. Sponsor a language learner. Preserve a legacy.
+
+**Preserving Our Past, Enriches Our Future**
+
+Ȏ bọdẹi ẹyerin buọ bo kokomẹnẹ mẹ, dẹin bai kpọ zuọmẹnẹ`,
+
     date: '2026-07-15',
     category: 'News',
     imageUrl: '/assets/img/article/scholarship.jpg'
@@ -199,10 +204,10 @@ export const MOCK_EVENTS: AppEvent[] = [
   {
     id: '1',
     title: 'Amassoma Dialect Standardization Conference',
-    date: 'November 2026',
+    date: 'Thursday 19th – Saturday 21st November 2026',
     location: 'Amassoma Community, Southern Ijaw LGA, Bayelsa State',
     description: 'A landmark conference bringing together linguists, elders, educators, and community members to establish a standardized written and spoken form of the Amassoma dialect of the Izon language. This is a historic step toward ensuring the dialect can be formally taught, documented, and preserved for generations to come.',
-    calendarDate: '20261101'
+    calendarDate: '20261119-20261122'
   },
   {
     id: '2',
