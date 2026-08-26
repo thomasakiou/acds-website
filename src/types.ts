@@ -2,7 +2,7 @@ export interface Member {
   id: string;
   name: string;
   role: string;
-  category: 'Founder' | 'Trustee' | 'Management Committee' | 'Full Member' | 'Associate Member';
+  category: 'Founder' | 'Trustee' | 'Management Committee' | 'Executive' | 'Membership';
   image?: string;
   joinDate: string;
   description?: string;

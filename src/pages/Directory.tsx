@@ -41,20 +41,20 @@ const CATEGORY_SECTIONS: CategorySection[] = [
     avatarClasses: 'bg-gradient-to-br from-emerald-500 to-teal-600 text-white shadow-lg shadow-emerald-200',
   },
   {
-    category: 'Full Member',
-    label: 'Full Members',
+    category: 'Executive',
+    label: 'Executives',
     icon: <UserCheck className="w-6 h-6 text-sky-600" />,
     accentColor: 'bg-gradient-to-r from-sky-500 via-blue-400 to-sky-600',
     badgeClasses: 'bg-sky-50 text-sky-700 ring-1 ring-sky-200/60',
     avatarClasses: 'bg-gradient-to-br from-sky-500 to-blue-600 text-white shadow-lg shadow-sky-200',
   },
   {
-    category: 'Associate Member',
-    label: 'Associate Members',
-    icon: <Users className="w-6 h-6 text-stone-400" />,
-    accentColor: 'bg-gradient-to-r from-stone-300 via-stone-200 to-stone-300',
-    badgeClasses: 'bg-stone-100 text-stone-500 ring-1 ring-stone-200/60',
-    avatarClasses: 'bg-gradient-to-br from-stone-200 to-stone-300 text-stone-600',
+    category: 'Membership',
+    label: 'Membership',
+    icon: <Users className="w-8 h-8 text-violet-500" />,
+    accentColor: 'bg-gradient-to-r from-violet-500 via-fuchsia-400 to-violet-600',
+    badgeClasses: 'bg-violet-50 text-violet-700 ring-1 ring-violet-200/60',
+    avatarClasses: 'bg-gradient-to-br from-violet-500 to-fuchsia-600 text-white shadow-lg shadow-violet-200',
   },
 ];
 
@@ -67,10 +67,15 @@ export function Directory() {
     (m.description || '').toLowerCase().includes(search.toLowerCase())
   );
 
-  // Trustees are the same people as Founders
   const getMembersForCategory = (category: MemberCategory): Member[] => {
     if (category === 'Trustee') {
-      return filteredMembers.filter(m => m.category === 'Founder');
+      return filteredMembers.filter(m => m.category === 'Founder' || m.category === 'Trustee');
+    }
+    if (category === 'Management Committee') {
+      return filteredMembers.filter(m => m.category === 'Management Committee' || ['1', '2', '3'].includes(m.id));
+    }
+    if (category === 'Membership') {
+      return filteredMembers;
     }
     return filteredMembers.filter(m => m.category === category);
   };
@@ -86,7 +91,7 @@ export function Directory() {
               Members Directory
             </h1>
             <p className="text-lg text-stone-600 max-w-2xl">
-              Meet the founders, trustees, management committee, and members driving the vision of the Amassoma Cultural and Development Society.
+              Meet the founders, trustees, management committee, and members driving the vision of the Society.
             </p>
           </div>
 
@@ -105,21 +110,40 @@ export function Directory() {
         {CATEGORY_SECTIONS.map((section) => {
           const members = getMembersForCategory(section.category);
           if (members.length === 0) return null;
+
+          const isMembership = section.category === 'Membership';
+
           return (
-            <div key={section.category} className="mb-16">
-              <h2 className="text-2xl font-bold text-stone-900 mb-6 flex items-center gap-2 border-b border-stone-200 pb-4">
+            <div
+              key={section.category}
+              className={`mb-16 ${isMembership
+                  ? 'mt-24 bg-gradient-to-b from-white to-violet-50/50 p-6 sm:p-12 rounded-[2.5rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] ring-1 ring-violet-100/80'
+                  : ''
+                }`}
+            >
+              <h2 className={`font-bold mb-8 flex items-center gap-3 border-b pb-5 ${isMembership
+                  ? 'text-3xl text-violet-950 border-violet-100'
+                  : 'text-2xl text-stone-900 border-stone-200'
+                }`}>
                 {section.icon}
                 {section.label}
+                {isMembership && (
+                  <span className="ml-auto text-sm font-semibold px-4 py-1.5 bg-violet-100/80 text-violet-700 rounded-full">
+                    {members.length} Members
+                  </span>
+                )}
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {members.map((member, idx) => (
                   <MemberCard
-                    key={member.id}
+                    key={`${section.category}-${member.id}`} // using compound key for safety
                     member={member}
                     delay={idx * 0.08}
                     accentColor={section.accentColor}
                     badgeClasses={section.badgeClasses}
                     avatarClasses={section.avatarClasses}
+                    hideTitleAndDescription={section.category === 'Founder' || section.category === 'Trustee'}
+                    isMembershipSection={section.category === 'Membership'}
                   />
                 ))}
               </div>
@@ -144,12 +168,16 @@ function MemberCard({
   accentColor,
   badgeClasses,
   avatarClasses,
+  hideTitleAndDescription,
+  isMembershipSection,
 }: {
   member: Member;
   delay: number;
   accentColor: string;
   badgeClasses: string;
   avatarClasses: string;
+  hideTitleAndDescription?: boolean;
+  isMembershipSection?: boolean;
   key?: React.Key;
 }) {
   const TITLES = ['mr', 'mrs', 'ms', 'dr', 'chief', 'prof', 'engr', 'hon', 'rev', 'pastor', 'barr', 'sir', 'dame', 'lady', 'alhaji', 'alhaja'];
@@ -159,6 +187,17 @@ function MemberCard({
     .map(n => n.charAt(0).toUpperCase())
     .slice(0, 2)
     .join('');
+
+  let displayRole = member.role;
+  let displayDescription = member.description;
+
+  if (hideTitleAndDescription) {
+    displayRole = '';
+    displayDescription = '';
+  } else if (isMembershipSection && member.category !== 'Membership') {
+    displayRole = 'Full Member';
+    displayDescription = '';
+  }
 
   return (
     <motion.div
@@ -198,16 +237,18 @@ function MemberCard({
         <h3 className="text-lg font-bold text-stone-900 leading-tight mb-2">
           {member.name}
         </h3>
-        <span
-          className={`inline-block text-xs font-semibold px-3 py-1 rounded-full mb-3 ${badgeClasses}`}
-        >
-          {member.role}
-        </span>
+        {displayRole && (
+          <span
+            className={`inline-block text-xs font-semibold px-3 py-1 rounded-full mb-3 ${badgeClasses}`}
+          >
+            {displayRole}
+          </span>
+        )}
 
         {/* Description */}
-        {member.description && (
+        {displayDescription && (
           <p className="text-sm text-stone-500 leading-relaxed mb-4 line-clamp-3">
-            {member.description}
+            {displayDescription}
           </p>
         )}
 

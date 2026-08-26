@@ -8,7 +8,7 @@ export const MOCK_MEMBERS: Member[] = [
     email: 'akpoebiokorowanta@acdscommunity.org', phone: '+234 803 456 7890'
   },
   {
-    id: '2', name: 'High Chief. Eric Ricky Avi', role: 'Vice Chairman', category: 'Founder', joinDate: '2020-03-20',
+    id: '2', name: 'High Chief. Eric Avi', role: 'Vice Chairman', category: 'Trustee', joinDate: '2020-03-20',
     image: '',
     description: 'An academic and peace-building expert dedicated to bridging education and community empowerment in Southern Ijaw.',
     email: 'chiefericavi@acdscommunity.org', phone: '+234 805 123 4567'
@@ -38,76 +38,76 @@ export const MOCK_MEMBERS: Member[] = [
     email: 'andrewokorowanta@acdscommunity.org', phone: '+234 802 456 7890'
   },
   {
-    id: '7', name: 'Mr. Adoewori Fredrick', role: 'Public Relations Coordinator', category: 'Management Committee', joinDate: '2022-08-05',
+    id: '7', name: 'Mr. Adoewori Fredrick', role: 'Public Relations Coordinator', category: 'Executive', joinDate: '2022-08-05',
     image: '',
     description: 'A dynamic public relations coordinator who ensures the society\'s public relations grows and stays connected.',
     email: 'adoeworifredrick@acdscommunity.org', phone: '+234 802 456 7890'
   },
   {
-    id: '8', name: 'Mr. Waibodei Peter Yeri', role: 'Community Research & Documentation Coordinator', category: 'Management Committee', joinDate: '2022-08-05',
+    id: '8', name: 'Mr. Waibodei Peter Yeri', role: 'Community Research & Documentation Coordinator', category: 'Executive', joinDate: '2022-08-05',
     image: '',
     description: 'A dynamic community research & documentation coordinator who ensures the society\'s community research & documentation grows and stays connected.',
     email: 'waibodeipeter@acdscommunity.org', phone: '+234 802 456 7890'
   },
   {
-    id: '9', name: 'Mr. Ebidiepere Jasper Akpama', role: 'ACDS Gallery & Social Media Coordinator', category: 'Management Committee', joinDate: '2022-08-05',
+    id: '9', name: 'Mr. Ebidiepere Jasper Akpama', role: 'ACDS Gallery & Social Media Coordinator', category: 'Executive', joinDate: '2022-08-05',
     image: '',
     description: 'A dynamic ACDS gallery & social media coordinator who ensures the society\'s ACDS gallery & social media grows and stays connected.',
     email: 'ebidieperejasper@acdscommunity.org', phone: '+234 802 456 7890'
   },
   {
-    id: '10', name: 'Mr. Segu Hausa-Ebi Ambaiowei', role: 'Sponsorships Coordinator', category: 'Management Committee', joinDate: '2022-08-05',
+    id: '10', name: 'Mr. Segu Hausa-Ebi Ambaiowei', role: 'Sponsorships Coordinator', category: 'Executive', joinDate: '2022-08-05',
     image: '',
     description: 'A dynamic Sponsorships coordinator who ensures the society\'s Sponsorships grows and stays connected.',
     email: 'seguambaiowei@acdscommunity.org', phone: '+234 802 456 7890'
   },
   {
-    id: '11', name: 'Mrs. Charity Charles Awortu', role: 'Events Coordinator', category: 'Management Committee', joinDate: '2022-08-05',
+    id: '11', name: 'Mrs. Charity Charles Awortu', role: 'Events Coordinator', category: 'Executive', joinDate: '2022-08-05',
     image: '',
     description: 'A dynamic Events coordinator who ensures the society\'s Events grows and stays connected.',
     email: 'charityawortu@acdscommunity.org', phone: '+234 802 456 7890'
   },
   {
-    id: '12', name: 'Mr. Tuperekeyi Sobai', role: 'Social Media Coordinator', category: 'Management Committee', joinDate: '2022-08-05',
+    id: '12', name: 'Mr. Tuperekeyi Sobai', role: 'Social Media Coordinator', category: 'Executive', joinDate: '2022-08-05',
     image: '',
     description: 'A dynamic Social Media coordinator who ensures the society\'s Social Media grows and stays connected.',
     email: 'tuperekeyisobai@acdscommunity.org', phone: '+234 802 456 7890'
   },
   {
-    id: '13', name: 'Mr. Ebitonghabofa Natco', role: 'Full Member', category: 'Full Member', joinDate: '2023-01-12',
+    id: '13', name: 'Mrs. Ebitonghabofa Natco', role: 'Full Member', category: 'Membership', joinDate: '2023-01-12',
     image: '',
-    description: 'An active community volunteer passionate about youth mentorship and environmental sustainability.',
+    description: '',
     email: 'ebitonghabofanatco@acdscommunity.org', phone: '+234 806 567 8901'
   },
   {
-    id: '14', name: 'Mr. Oyeindoubra Nelson Mutu', role: 'Full Member', category: 'Full Member', joinDate: '2023-04-18',
+    id: '14', name: 'Mr. Oyeindoubra Nelson Mutu', role: 'Full Member', category: 'Membership', joinDate: '2023-04-18',
     image: '',
-    description: 'A cultural enthusiast with a deep knowledge of Ijaw traditions and a flair for organizing heritage events.',
+    description: '',
     email: 'oyeindoubranelson@acdscommunity.org', phone: '+234 808 678 9012'
   },
   {
-    id: '15', name: 'Mr. Timiyerimene Ayogoi', role: 'Associate Member', category: 'Associate Member', joinDate: '2023-06-22',
+    id: '15', name: 'Ms. Timiyerimene Ayogoi', role: 'Associate Member', category: 'Membership', joinDate: '2023-06-22',
     image: '',
-    description: 'A skilled educator contributing to literacy programs and academic excellence initiatives within the community.',
+    description: '',
     email: 'timiyerimeneayogo@acdscommunity.org', phone: '+234 701 789 0123'
   },
   {
-    id: '16', name: 'Chief. Eunice Apreala', role: 'Associate Member', category: 'Associate Member', joinDate: '2023-09-30',
+    id: '16', name: 'Chief. Eunice Apreala', role: 'Associate Member', category: 'Membership', joinDate: '2023-09-30',
     image: '',
-    description: 'A healthcare advocate working to improve access to medical services across underserved areas of Bayelsa.',
+    description: '',
     email: 'euniceapreala@acdscommunity.org', phone: '+234 703 890 1234'
   },
   {
-    id: '17', name: 'Mr. Zozonaebi Fredrick', role: 'Associate Member', category: 'Associate Member', joinDate: '2024-01-05',
+    id: '17', name: 'Mrs. Zozonaebi Frederick (Phd)', role: 'Associate Member', category: 'Membership', joinDate: '2024-01-05',
     image: '',
-    description: 'An entrepreneur and tech enthusiast driving digital literacy and innovation among the youth.',
+    description: '',
     email: 'zozonaebifredrick@acdscommunity.org', phone: '+234 705 901 2345'
   },
   {
-    id: '18', name: 'Mr. Pere-Ebi Mark', role: 'Associate Member', category: 'Associate Member', joinDate: '2024-01-05',
+    id: '18', name: 'Ms. Pere-Ebi Mark', role: 'Associate Member', category: 'Membership', joinDate: '2024-01-05',
     image: '',
-    description: 'An entrepreneur and tech enthusiast driving digital literacy and innovation among the youth.',
-    email: 'pere-ebimark@acdscommunity.org', phone: '+234 705 901 2345'
+    description: '',
+    email: 'pereebimark@acdscommunity.org', phone: '+234 705 901 2345'
   },
 ];
 
@@ -222,7 +222,7 @@ export const MOCK_EVENTS: AppEvent[] = [
     id: '3',
     title: 'Amasomo Pọọn Tolumọ Sukulu (History of Amassoma)',
     date: 'Every 3rd Wednessday of the month',
-    location: 'ACDS Tomubọlọu-Efiẹ Whatsapp group',
+    location: 'ACDS Amasomo Pọọn Fie Ogbo Whatsapp group',
     description: 'Our monthly gathering where we learn the history of Ammassoma during our language class.',
     link: 'https://chat.whatsapp.com/EvgrPWRHCusLNxHa6BsQdR',
     linkLabel: 'Join Group'
@@ -231,7 +231,7 @@ export const MOCK_EVENTS: AppEvent[] = [
     id: '4',
     title: 'Tomubọlọu-Efiẹ (Community Town Hall)',
     date: 'Every 3rd Friday of the month by 7pm Nigerian Time',
-    location: 'ACDS Tomubọlọu-Efiẹ Whatsapp group',
+    location: 'ACDS Amasomo Pọọn Fie Ogbo Whatsapp group',
     description: 'Our regular monthly open mic online meeting to discuss issues affecting the Amassoma community.',
     link: 'https://chat.whatsapp.com/EvgrPWRHCusLNxHa6BsQdR',
     linkLabel: 'Join Group'
