@@ -9,7 +9,7 @@ export function Footer() {
           <div className="md:col-span-1">
             <h3 className="text-white font-bold text-lg mb-4">ACDS</h3>
             <p className="text-sm leading-relaxed max-w-xs">
-              Amassoma Cultural and Development Society (ACDS) promotes the culture, heritage, and language of the Amassoma people in Southern Ijaw Local Government Area, Bayelsa State.
+              Amassoma Cultural and Development Society (ACDS) promotes the culture, language and history of the Amassoma people in Southern Ijaw Local Government Area, Bayelsa State.
             </p>
             <div className="mt-4 pt-4 border-t border-stone-800">
               <p className="text-xs text-emerald-400 font-semibold italic">

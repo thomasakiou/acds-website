@@ -43,12 +43,12 @@ export const MOCK_MEMBERS: Member[] = [
     description: 'A dynamic public relations coordinator who ensures the society\'s public relations grows and stays connected.',
     email: 'adoeworifredrick@acdscommunity.org', phone: '+234 802 456 7890'
   },
-  {
-    id: '8', name: 'Mr. Waibodei Peter Yeri', role: 'Community Research & Documentation Coordinator', category: 'Executive', joinDate: '2022-08-05',
-    image: '',
-    description: 'A dynamic community research & documentation coordinator who ensures the society\'s community research & documentation grows and stays connected.',
-    email: 'waibodeipeter@acdscommunity.org', phone: '+234 802 456 7890'
-  },
+  // {
+  //   id: '8', name: 'Mr. Waibodei Peter Yeri', role: 'Community Research & Documentation Coordinator', category: 'Executive', joinDate: '2022-08-05',
+  //   image: '',
+  //   description: 'A dynamic community research & documentation coordinator who ensures the society\'s community research & documentation grows and stays connected.',
+  //   email: 'waibodeipeter@acdscommunity.org', phone: '+234 802 456 7890'
+  // },
   {
     id: '9', name: 'Mr. Ebidiepere Jasper Akpama', role: 'ACDS Gallery & Social Media Coordinator', category: 'Executive', joinDate: '2022-08-05',
     image: '',
