@@ -30,10 +30,13 @@ export function Home() {
             <span className="inline-block py-1 px-3 rounded-full bg-emerald-900/50 border border-emerald-500/30 text-emerald-400 text-sm font-semibold tracking-wider mb-6">
               SLOGAN: Ó Pọọn Mọ, Éyerin Buọ Mọ !
             </span>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight">
               Amassoma Cultural & <br className="hidden md:block" />
               Development Society
             </h1>
+            <p className="text-lg md:text-xl text-stone-300 font-medium mb-8">
+              Founded in 2022
+            </p>
 
             <div className="bg-stone-800/50 backdrop-blur-sm border border-stone-700/50 p-6 rounded-2xl max-w-2xl mx-auto mb-10">
               <p className="text-lg md:text-xl font-semibold text-emerald-300 mb-2">

@@ -2,31 +2,31 @@ import { Article, Member, AppEvent, Project } from './types';
 
 export const MOCK_MEMBERS: Member[] = [
   {
-    id: '1', name: 'Mr. Akpoebi Okorowanta', role: 'Chairman', category: 'Founder', joinDate: '2020-01-15',
+    id: '1', name: 'Mr. Akpoebi Okorowanta', role: 'Chairman', category: 'Founder', joinDate: '2022-01-15',
     image: '',
     description: 'A visionary community leader with years of experience in cultural advocacy and grassroots development across the Niger Delta.',
     email: 'akpoebiokorowanta@acdscommunity.org', phone: '+234 803 456 7890'
   },
   {
-    id: '2', name: 'High Chief. Eric Avi', role: 'Vice Chairman', category: 'Trustee', joinDate: '2020-03-20',
+    id: '2', name: 'High Chief. Eric Avi', role: 'Vice Chairman', category: 'Trustee', joinDate: '2022-03-20',
     image: '',
     description: 'An academic and peace-building expert dedicated to bridging education and community empowerment in Southern Ijaw.',
     email: 'chiefericavi@acdscommunity.org', phone: '+234 805 123 4567'
   },
   {
-    id: '3', name: 'Ms. Ebi Owoubiri', role: 'Secretary', category: 'Founder', joinDate: '2021-05-10',
+    id: '3', name: 'Ms. Ebi Owoubiri', role: 'Secretary', category: 'Founder', joinDate: '2022-05-10',
     image: '',
     description: 'An accomplished administrator who ensures the society\'s operations run smoothly and all members stay informed and connected.',
     email: 'ebiowoubiri@acdscommunity.org', phone: '+234 807 234 5678'
   },
   {
-    id: '4', name: 'Mr. Ebibo Ford', role: 'Treasurer', category: 'Management Committee', joinDate: '2021-05-10',
+    id: '4', name: 'Mr. Ebibo Ford', role: 'Treasurer', category: 'Management Committee', joinDate: '2022-05-10',
     image: '',
     description: 'A financial expert with a proven track record of managing funds and ensuring the society\'s financial stability.',
     email: 'ebiboford@acdscommunity.org', phone: '+234 807 234 5678'
   },
   {
-    id: '5', name: 'Engr. Ebimobowei Thomas Akiou', role: 'Assistant Secretary/Communication and Technology Coordinator', category: 'Management Committee', joinDate: '2021-02-11',
+    id: '5', name: 'Engr. Ebimobowei Thomas Akiou', role: 'Assistant Secretary/Communication and Technology Coordinator', category: 'Management Committee', joinDate: '2022-02-11',
     image: '/assets/img/exco/thomas.jpeg',
     description: 'A computer engineer and technology enthusiast committed to enhancing the society\'s digital presence and communication infrastructure.',
     email: 'ebimoboweithomas@acdscommunity.org', phone: '+234 809 345 6789'
@@ -56,7 +56,7 @@ export const MOCK_MEMBERS: Member[] = [
     email: 'ebidieperejasper@acdscommunity.org', phone: '+234 802 456 7890'
   },
   {
-    id: '10', name: 'Mr. Segu Hausa-Ebi Ambaiowei', role: 'Sponsorships Coordinator', category: 'Executive', joinDate: '2022-08-05',
+    id: '10', name: 'Mr. Hausa-Ebi Segu Ambaiowei', role: 'Sponsorships Coordinator', category: 'Executive', joinDate: '2022-08-05',
     image: '',
     description: 'A dynamic Sponsorships coordinator who ensures the society\'s Sponsorships grows and stays connected.',
     email: 'seguambaiowei@acdscommunity.org', phone: '+234 802 456 7890'
@@ -98,7 +98,7 @@ export const MOCK_MEMBERS: Member[] = [
     email: 'euniceapreala@acdscommunity.org', phone: '+234 703 890 1234'
   },
   {
-    id: '17', name: 'Mrs. Zozonaebi Frederick (Phd)', role: 'Associate Member', category: 'Membership', joinDate: '2024-01-05',
+    id: '17', name: 'Mrs. Zozonaebi Frederick (PhD)', role: 'Associate Member', category: 'Membership', joinDate: '2024-01-05',
     image: '',
     description: '',
     email: 'zozonaebifredrick@acdscommunity.org', phone: '+234 705 901 2345'
@@ -128,7 +128,7 @@ The colonial era brought significant changes to Amassoma, as it did to many Nige
 
 Today, Amassoma is perhaps best known as the home of Niger Delta University, one of the premier institutions of higher learning in the region. This university stands as a testament to the community's long-standing commitment to education and intellectual development — a value that has been central to Amassoma's identity since its founding.
 
-The Amassoma Community Development Society (ACDS) continues this legacy, working to document, preserve, and celebrate the rich history of the community while driving sustainable development for future generations.`,
+The Amassoma Cultural and Development Society (ACDS), founded in 2022, continues this legacy, working to document, preserve, and celebrate the rich history of the community while driving sustainable development for future generations.`,
     date: '2026-06-12',
     category: 'History',
     imageUrl: '/assets/img/article/amassoma.jpg'
