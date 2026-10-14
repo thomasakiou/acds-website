@@ -69,7 +69,7 @@ export const MOCK_MEMBERS: Member[] = [
   },
   {
     id: '12', name: 'Mr. Tuperekeyi Sobai', role: 'Social Media Coordinator', category: 'Executive', joinDate: '2022-08-05',
-    image: '',
+    image: '/assets/img/exco/sobai.png',
     description: 'A dynamic Social Media coordinator who ensures the society\'s Social Media grows and stays connected.',
     email: 'tuperekeyisobai@acdscommunity.org', phone: '+234 802 456 7890'
   },
